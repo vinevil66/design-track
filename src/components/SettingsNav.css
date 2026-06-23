@@ -1,0 +1,25 @@
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-sm);
+  width: 224px;
+  flex-shrink: 0;
+}
+
+.settings-nav__item {
+  font-size: var(--font-size-body-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  cursor: pointer;
+}
+
+.settings-nav__item--active {
+  color: var(--color-text-primary);
+  background: var(--color-hover);
+}
