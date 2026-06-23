@@ -25,34 +25,43 @@ export default function Settings() {
       <div className="settings__body">
         <SettingsNav items={NAV_ITEMS} active={activeNav} onSelect={setActiveNav} />
         <div className="settings__content">
-          <SettingsSection title="Account" description="Update your personal information and contact details.">
-            <div className="settings__fields">
-              <TextField label="Name" value={name} onChange={setName} />
-              <TextField label="Email" type="email" value={email} onChange={setEmail} />
-            </div>
-            <Button onClick={() => {}}>Save</Button>
-          </SettingsSection>
-          <SettingsSection title="Notifications" description="Choose how you want to be notified.">
-            <NotificationRow
-              title="Email notifications"
-              description="Receive updates and summaries in your inbox."
-              checked={emailNotifications}
-              onChange={setEmailNotifications}
-            />
-            <NotificationRow
-              title="Push notifications"
-              description="Get real-time alerts on your devices."
-              checked={pushNotifications}
-              onChange={setPushNotifications}
-            />
-            <NotificationRow
-              title="SMS notifications"
-              description="Receive important alerts via text message."
-              checked={smsNotifications}
-              onChange={setSmsNotifications}
-              showDivider={false}
-            />
-          </SettingsSection>
+          {activeNav === 'Account' && (
+            <SettingsSection title="Account" description="Update your personal information and contact details.">
+              <div className="settings__fields">
+                <TextField label="Name" value={name} onChange={setName} />
+                <TextField label="Email" type="email" value={email} onChange={setEmail} />
+              </div>
+              <Button onClick={() => {}}>Save</Button>
+            </SettingsSection>
+          )}
+          {activeNav === 'Notifications' && (
+            <SettingsSection title="Notifications" description="Choose how you want to be notified.">
+              <NotificationRow
+                title="Email notifications"
+                description="Receive updates and summaries in your inbox."
+                checked={emailNotifications}
+                onChange={setEmailNotifications}
+              />
+              <NotificationRow
+                title="Push notifications"
+                description="Get real-time alerts on your devices."
+                checked={pushNotifications}
+                onChange={setPushNotifications}
+              />
+              <NotificationRow
+                title="SMS notifications"
+                description="Receive important alerts via text message."
+                checked={smsNotifications}
+                onChange={setSmsNotifications}
+                showDivider={false}
+              />
+            </SettingsSection>
+          )}
+          {activeNav === 'Security' && (
+            <SettingsSection title="Security" description="Manage your password and account security.">
+              <p className="settings__placeholder">Security settings are coming soon.</p>
+            </SettingsSection>
+          )}
         </div>
       </div>
     </div>
