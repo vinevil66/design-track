@@ -12,5 +12,5 @@ All colors, spacing, font sizes, and border radii must come from the CSS custom 
 Available tokens:
 - `--color-background`, `--color-surface`, `--color-text-primary`, `--color-text-secondary`, `--color-border`
 - `--font-size-body`, `--font-size-heading`
-- `--spacing-sm`, `--spacing-md`, `--spacing-lg`
+- `--spacing-sm`, `--spacing-md`, `--spacing-lg`, `--spacing-xl`
 - `--border-radius-md`
