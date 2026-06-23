@@ -10,6 +10,23 @@
   border-radius: var(--border-radius-md);
 }
 
+.card:hover:not(.card--disabled) {
+  box-shadow: var(--shadow-hover);
+}
+
+.card:hover:not(.card--disabled) .card__title {
+  color: var(--color-accent);
+}
+
+.card--disabled {
+  pointer-events: none;
+}
+
+.card--disabled .card__title,
+.card--disabled .card__body {
+  color: var(--color-text-disabled);
+}
+
 .card__title {
   font-size: var(--font-size-heading);
   font-weight: 600;

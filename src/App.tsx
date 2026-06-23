@@ -16,6 +16,11 @@ function App() {
         title="Title"
         body="Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
       />
+      <Card
+        title="Title"
+        body="Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story."
+        variant="disabled"
+      />
     </main>
   )
 }
