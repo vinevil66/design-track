@@ -8,6 +8,9 @@
 }
 
 .settings-nav__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   font-size: var(--font-size-body-sm);
   font-weight: 500;
   color: var(--color-text-secondary);
@@ -17,6 +20,11 @@
   padding: var(--spacing-sm) var(--spacing-md);
   text-align: left;
   cursor: pointer;
+}
+
+.settings-nav__icon {
+  display: flex;
+  flex-shrink: 0;
 }
 
 .settings-nav__item--active {
