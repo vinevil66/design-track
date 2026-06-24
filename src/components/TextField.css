@@ -20,3 +20,16 @@
   border-radius: var(--border-radius-sm);
   padding: var(--spacing-sm) var(--spacing-md);
 }
+
+.text-field__input::placeholder {
+  color: var(--color-text-disabled);
+}
+
+.text-field__input--error {
+  border-color: var(--color-danger);
+}
+
+.text-field__error {
+  font-size: var(--font-size-body-sm);
+  color: var(--color-danger);
+}

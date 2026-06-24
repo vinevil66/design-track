@@ -16,13 +16,17 @@ export default function NotificationRow({
   onChange,
   showDivider = true,
 }: NotificationRowProps) {
+  const descriptionId = `${title.replace(/\s+/g, '-').toLowerCase()}-description`
+
   return (
     <div className={showDivider ? 'notification-row notification-row--divider' : 'notification-row'}>
       <div>
         <p className="notification-row__title">{title}</p>
-        <p className="notification-row__description">{description}</p>
+        <p className="notification-row__description" id={descriptionId}>
+          {description}
+        </p>
       </div>
-      <Toggle checked={checked} onChange={onChange} label={title} />
+      <Toggle checked={checked} onChange={onChange} label={title} describedBy={descriptionId} />
     </div>
   )
 }

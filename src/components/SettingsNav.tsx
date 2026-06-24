@@ -48,6 +48,7 @@ export default function SettingsNav({ items, active, onSelect }: SettingsNavProp
         <button
           key={item}
           type="button"
+          aria-current={item === active ? 'page' : undefined}
           className={item === active ? 'settings-nav__item settings-nav__item--active' : 'settings-nav__item'}
           onClick={() => onSelect(item)}
         >

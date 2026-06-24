@@ -31,3 +31,9 @@
   color: var(--color-text-primary);
   background: var(--color-hover);
 }
+
+@media (max-width: 640px) {
+  .settings-nav {
+    width: 100%;
+  }
+}

@@ -41,3 +41,24 @@
   color: var(--color-text-secondary);
   margin: 0;
 }
+
+.settings__save {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.settings__saved {
+  font-size: var(--font-size-body-sm);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 640px) {
+  .settings__body {
+    flex-direction: column;
+  }
+
+  .settings__fields {
+    flex-direction: column;
+  }
+}
